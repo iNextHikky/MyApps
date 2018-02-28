@@ -6,7 +6,7 @@
 MoodAnalysis is software to change from detection of mood to numerical value in around.
 It's require that you only need to run C language.
 
-*DevelopmentEvironment*
+*DevelopmentEnvironment*
 -----------------------
 Xcode 9.2
 
