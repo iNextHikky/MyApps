@@ -21,10 +21,15 @@ Result is from 100 to minus infinity.
 *Notes*
 -------
 You need to survey four items before build it.
+
 1.Rating of Position
+
 2.People's Attention of Position
+
 3.Illuminance(lux) of Position
+
 4.Noise(db) of Position
+
 5.Look up each other silence times
 
 *Author*
