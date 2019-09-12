@@ -24,7 +24,7 @@ int main(){
 	char *fname = filename;
 //	char *fname = "SIRSB17T2100B.csv";
 	char buf[3];
-	char empty[30];
+	char empty[8][30];
 	double sum = 0.0;
 	int ave = 0;
 	int ret;
@@ -34,8 +34,7 @@ int main(){
 		printf("%s can't open.\n", fname);
 		exit(EXIT_FAILURE);
 	}
-	while((ret = fscanf(fp, "%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],", empty, empty, empty, empty, empty, empty, buf,empty)
-) != EOF){
+	while((ret = fscanf(fp, "%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],", empty[0], empty[1], empty[2], empty[3], empty[4], empty[5], buf,empty[6])) != EOF){
 		switch(buf[1]){
 			case 'A':
 				sum += 4;
