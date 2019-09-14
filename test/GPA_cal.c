@@ -12,7 +12,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define IDNUMBER 9
+#define IDNUMBER 10
 
 int main(){
 	FILE *fp;
@@ -22,19 +22,21 @@ int main(){
 	fgets(id, IDNUMBER, stdin);
 	sprintf(filename, "%s%s%s", "SIRS", id, ".csv");
 	char *fname = filename;
-//	char *fname = "SIRSB17T2100B.csv";
-	char buf[3];
-	char empty[8][30];
+//	char *fname = "SIRS.csv";
+	char buf[30];
+	char empty[6][30];
 	double sum = 0.0;
-	int ave = 0;
+	int i = 0;
+	double ave = 0;
 	int ret;
-
+	puts(filename);
 	fp = fopen(fname, "r");
 	if(fp == NULL){
 		printf("%s can't open.\n", fname);
 		exit(EXIT_FAILURE);
 	}
-	while((ret = fscanf(fp, "%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],", empty[0], empty[1], empty[2], empty[3], empty[4], empty[5], buf,empty[6])) != EOF){
+	while((ret = fscanf(fp, "%[^,],%[^,],%[^,],%[^,],%[^,],%[^,],%s", empty[0], empty[1], empty[2], empty[3], empty[4], empty[5], buf)) != EOF){
+//        puts(buf);
 		switch(buf[1]){
 			case 'A':
 				sum += 4;
@@ -51,9 +53,11 @@ int main(){
 			default:
 				;
 		}
-		ave++;
+//        printf("%lf, %d\n", sum, i);
+		i++;
 	}
-	ave = sum / ave;
-	puts(ave);
+	ave = sum / i;
+    printf("%lf\n", ave);
+    fclose(fp);
 	return 0;
 }
