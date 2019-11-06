@@ -3,7 +3,7 @@
 //  ProductMix
 //
 //  Created by iNextHikky on 2019/11/06.
-//  Copyright © 2019 K.M. All rights reserved.
+//  Copyright © 2019 All rights reserved.
 //
 
 #include <stdio.h>
