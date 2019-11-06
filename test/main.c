@@ -2,7 +2,7 @@
 //  main.c
 //  ProductMix
 //
-//  Created by 前中宏介 on 2019/11/06.
+//  Created by iNextHikky on 2019/11/06.
 //  Copyright © 2019 K.M. All rights reserved.
 //
 
